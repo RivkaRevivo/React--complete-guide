@@ -18,7 +18,7 @@ const ExpenseForm = (props) => {
         //     ...userInput,
         //     entertitle:event.target.value,
         //    })
-        console.log(event.target.value)
+       // console.log(event.target.value)
     };
     const AmountCangeHandler = (event) => {
         setEnterAmount(event.target.value);
@@ -26,7 +26,7 @@ const ExpenseForm = (props) => {
         //     ...userInput,
         //     enterAmount:event.target.value,
         //    })
-        console.log(event.target.value)
+       // console.log(event.target.value)
     };
     const dateCangeHandler = (event) => {
         setEnterdate(event.target.value);//work separeatly
@@ -38,19 +38,19 @@ const ExpenseForm = (props) => {
         //             return :{ ...prevState , enterdate:event.target.value},
         //  } ) ;
 
-        console.log(event.target.value)
+       // console.log(event.target.value)
     };
 
     const submitHandler = (event) => {
           event.preventDefault()
     //    event.preventDeafault();//ignore the deafault sendtoservr
-           const expenseDataa = {
-            title:entertitle,
-            Amount: enterAmount,
+           const expenseData = {
+            title: entertitle,
+            amount: enterAmount,
             date : new Date(enterdate),//change tocdata from string
            };
-           console.log(expenseDataa)
-           props.onSaveExpenseData(expenseDataa);
+          // console.log(expenseDataa)
+           props.onSaveExpenseData(expenseData);
            setEnterAmount('');
            setEnterTitle('');
            setEnterdate('');

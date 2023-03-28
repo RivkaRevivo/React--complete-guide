@@ -5,8 +5,9 @@ import './NewExpense.css'
 const NewExpense = (props)=>{
 const saveExpenseDareHandler = (enterdEpectData) =>{
     const expenseData={
+        id: Math.random().toString(),
         ...enterdEpectData,
-        id: Math.random().toString()
+        
     };
    console.log(expenseData)
    props.onAddExpense(expenseData)
